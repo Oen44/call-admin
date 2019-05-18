@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <nav id="sidebar">
+    <ul class="list-unstyled components">
+      <li routerLinkActive="active">
+        <a routerLink="home"><i class="fas fa-chart-bar"></i>Statystyki</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="servers"><i class="fas fa-server"></i>Serwery</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="admins"><i class="fas fa-user-secret"></i>Administracja</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="settings"><i class="fas fa-cogs"></i>Ustawienia</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="payment"><i class="fas fa-dollar-sign"></i>Płatność</a>
+      </li>
+      <li>
+        <a (click)="logout()" routerLink="/"><i class="fas fa-sign-out-alt"></i>Wyloguj</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <div class="row tile_count">
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-bullhorn"></i> Ilość Wezwań</span>
+        <div class="count green" data-last_number="2500" data-new_number="2500">2500</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-skull-crossbones"></i> Wezwania Oczekujące</span>
+        <div class="count red" data-last_number="2500" data-new_number="2500">123</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-bolt"></i> Najaktywniejszy Serwer</span>
+        <div class="count_name text-truncate">Only DeDust2</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-thumbs-up"></i> Najaktywniejszy Admin</span>
+        <div class="count_name text-truncate">oeN.</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-server"></i> Ilość Serwerów</span>
+        <div class="count" data-last_number="2500" data-new_number="2500">2315</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-users"></i> Ilość Adminów</span>
+        <div class="count" data-last_number="2500" data-new_number="2500">7325</div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

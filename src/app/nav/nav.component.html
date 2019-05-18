@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" appScrollNav>
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [ngx-scroll-to]="'features'">Funkcje</a>
+        </li>
+        <li class=" nav-item">
+          <a class="nav-link" [ngx-scroll-to]="'prices'">Cennik</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngx-scroll-to]="'download'">Pobierz</a>
+        </li>
+        <li class="nav-item" *ngIf="User.isLoggedIn; else loginBlock">
+          <div ngbDropdown>
+            <a class="nav-link" id="userDropdown" ngbDropdownToggle>
+              {{User.username}}
+            </a>
+
+            <div ngbDropdownMenu aria-labelledby="userDropdown">
+              <a class="dropdown-item" routerLink="/panel">Panel</a>
+              <a class="dropdown-item" routerLink="/panel/settings">Ustawienia</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" (click)="logout()">Wyloguj</a>
+            </div>
+          </div>
+        </li>
+        <ng-template #loginBlock>
+          <app-login></app-login>
+        </ng-template>
+        <app-register *ngIf="!User.isLoggedIn"></app-register>
+      </ul>
+    </div>
+  </div>
+</nav>

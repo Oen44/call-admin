@@ -1,0 +1,165 @@
+<div class="wrapper">
+  <nav id="sidebar">
+    <ul class="list-unstyled components">
+      <li class="menu-label">
+        SERWERY
+      </li>
+      <li class="active">
+        <a routerLink="home">Only DeDust2</a>
+      </li>
+      <li>
+        <a routerLink="home">4Fun</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+      <li>
+        <a routerLink="home">4Fun</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+      <li>
+        <a routerLink="home">4Fun</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+      <li>
+        <a routerLink="home">4Fun</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+      <li>
+        <a routerLink="home">4Fun</a>
+      </li>
+      <li>
+        <a routerLink="home">4Maps</a>
+      </li>
+      <li>
+        <a routerLink="home">CS:GO Mod</a>
+      </li>
+      <li>
+        <a routerLink="home">JailBreak</a>
+      </li>
+    </ul>
+    <ul class="list-unstyled components">
+      <li class="menu-label">
+        MENU
+      </li>
+      <li>
+        <a routerLink="home">Ustawienia</a>
+      </li>
+      <li>
+        <a routerLink="home">Wyloguj</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="content" class="scrollable">
+    <div class="row tile_count">
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-server"></i> Serwer</span>
+        <div class="count_name text-truncate">Only DeDust2</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-bullhorn"></i> Ilość Wezwań</span>
+        <div class="count green" data-last_number="2500" data-new_number="2500">2500</div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fas fa-skull-crossbones"></i> Wezwania Oczekujące</span>
+        <div class="count red" data-last_number="2500" data-new_number="2500">123</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">OSKARŻONY</th>
+              <th scope="col">POWÓD WEZWANIA</th>
+              <th scope="col">WZYWAJĄCY</th>
+              <th scope="col">DATA</th>
+              <th scope="col">STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor='let in of counter(55) ;let i = index'>
+              <tr>
+                <th scope="row">Aimer.exe</th>
+                <td>AimBot + WallHack</td>
+                <td>oeN.</td>
+                <td>22 / 11 / 2018</td>
+                <td><span class="badge badge-secondary">OCZEKUJE</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Aimer.exe</th>
+                <td>AimBot</td>
+                <td>oeN.</td>
+                <td>22 / 11 / 2018</td>
+                <td><span class="badge badge-primary">W TRAKCIE</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Aimer.exe</th>
+                <td>WallHack</td>
+                <td>oeN.</td>
+                <td>22 / 11 / 2018</td>
+                <td><span class="badge badge-success">WYKONANE</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Aimer.exe</th>
+                <td>SpeedHack</td>
+                <td>oeN.</td>
+                <td>22 / 11 / 2018</td>
+                <td><span class="badge badge-danger">ANULOWANE</span></td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

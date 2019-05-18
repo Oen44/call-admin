@@ -1,0 +1,32 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nazwa Serwera</th>
+      <th scope="col">Typ Serwera</th>
+      <th scope="col">Opcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let server of servers">
+      <th scope="row">{{ server.id }}</th>
+      <td>{{ server.name }}</td>
+      <td>{{ server.type }}</td>
+      <td>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" [attr.id]="'server_' + server.id" data-toggle="dropdown">Opcje</a>
+
+          <div class="dropdown-menu" [attr.aria-labelledby]="'server_' + server.id">
+            <a class="dropdown-item" [routerLink]="'edit/' + server.id"><i class="fas fa-edit"></i> Edytuj</a>
+            <a class="dropdown-item" (click)="selectServer(server.id)"><i class="fas fa-trash"></i>
+              Usuń</a>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<swal #deleteSwal title="Usunąć {{ selected.name }}?" text="Usuwając serwer z listy, usuwasz też wezwania z nim związane."
+  type="warning" [showCancelButton]="true" confirmButtonText="Tak" cancelButtonText="Nie" [reverseButtons]="true"
+  (confirm)="deleteServer()">
+</swal>
